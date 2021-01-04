@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+yarn.lock
 /.pnp
 .pnp.js
 
@@ -36,3 +37,6 @@ yarn-error.log*
 
 # build
 /dist/
+
+# vscode
+/.vscode/
