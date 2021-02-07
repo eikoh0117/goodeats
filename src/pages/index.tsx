@@ -1,57 +1,47 @@
 import { FC } from 'react'
 import Head from 'next/head'
+import 'semantic-ui-css/semantic.min.css'
 import styles from 'styles/pages/index.module.scss'
 
 const Home: FC = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>root</title>
+        <title>Bad Eats</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Bad Eats!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.js</code>
-        </p>
+        <p className={styles.description}>飲食店選びで失敗したくない人へ</p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples" className={styles.card}>
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
+        <div className="ui container" id="container">
+          <div className={styles.Search__Form}>
+            <form className={`ui form ${styles.segment}`}>
+              <div className="field">
+                <label>
+                  <i className="map pin icon"></i>場所
+                </label>
+                <select className="ui dropdown" name="dropdown">
+                  <option value="1">新宿駅</option>
+                </select>
+              </div>
+              <div className={styles.Search__Button}>
+                <button type="submit" className={styles.Search__Button__Design}>
+                  <i className="search icon"></i>飲食店を検索する
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        <a href="https://twitter.com/eikoh_tech" target="_blank" rel="noopener noreferrer">
+          Powered by Hidemitsu Aoki
         </a>
       </footer>
     </div>
